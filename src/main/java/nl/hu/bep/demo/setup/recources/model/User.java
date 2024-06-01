@@ -51,6 +51,5 @@ public class User implements Serializable {
     public void addWorkouts(Workouts workout) {
         this.workouts.add(workout);
     }
-
-
+     //TODO maak een equals voor users
 }

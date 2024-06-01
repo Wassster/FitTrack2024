@@ -1,6 +1,5 @@
 package nl.hu.bep.demo.setup.recources.model;
 
-import jdk.internal.org.jline.terminal.spi.Pty;
 
 public class Profile {
 
