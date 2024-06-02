@@ -25,10 +25,8 @@ public class LoginResource {
         for(User user1 : users){
             if(user1.getUsername().equals(user.getUsername())&&user1.getPassword().equals(user.getPassword())){
                 return Response.ok("login succesvol").build();
-            }else{
-                return Response.status(Response.Status.UNAUTHORIZED).entity("ongeldige gegevens").build();
             }
         }
-        return null;
+        return Response.status(401).entity("ongeldige gegevens").build();
     }
 }

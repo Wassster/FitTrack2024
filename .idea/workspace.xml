@@ -9,17 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="maven aangepast">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/LoginResource.java" afterDir="false" />
+    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="login geprobeerd werkend te maken veder met debuggen van waarom de server niet opstart">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/MyServletContextListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/BackgroundFitTrack.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/FitTrackLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/achter.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/registrer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/eslint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/javas/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/nog.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/web/createProfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/web/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/web/registeren.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/JerseyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/JerseyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/FitTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/FitTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Workouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Workouts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/ProfilesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/ProfilesResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nl/hu/bep/demo/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/LoginResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +39,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -62,6 +73,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -70,6 +82,7 @@
     "Tomcat Server.Tomcat 9.0.89.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/wzena/OneDrive/Bureaublad/FitTrack2024/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,13 +92,24 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\css" />
+      <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\javas" />
+      <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\web" />
+      <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.89" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.89" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="FitTrack2024:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/api/login" />
           </settings>
         </artifact>
       </deployment>
@@ -188,7 +212,9 @@
       <workItem from="1716902472245" duration="921000" />
       <workItem from="1717181415956" duration="638000" />
       <workItem from="1717240336760" duration="10023000" />
-      <workItem from="1717278722560" duration="4412000" />
+      <workItem from="1717278722560" duration="4609000" />
+      <workItem from="1717326773959" duration="1062000" />
+      <workItem from="1717336073415" duration="5848000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />
@@ -222,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717278685360</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="login geprobeerd werkend te maken veder met debuggen van waarom de server niet opstart">
+      <option name="closed" value="true" />
+      <created>1717283741495</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717283741495</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +266,7 @@
     <MESSAGE value="eerste commit" />
     <MESSAGE value="domeinlaag gemaakt" />
     <MESSAGE value="maven aangepast" />
-    <option name="LAST_COMMIT_MESSAGE" value="maven aangepast" />
+    <MESSAGE value="login geprobeerd werkend te maken veder met debuggen van waarom de server niet opstart" />
+    <option name="LAST_COMMIT_MESSAGE" value="login geprobeerd werkend te maken veder met debuggen van waarom de server niet opstart" />
   </component>
 </project>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../FitTrackLogo.png" />
+    <link rel="stylesheet" href="../css/registrer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitTrack</title>
+    <script type="module" src="/javas/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="../FitTrackLogo.png" alt="FitTracklogo" class="oep" />
+      <nav class="nav">
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <form class="form" action="">
+        <h1 class="kleur">Create profile</h1>
+        <div class="input">
+          <input type="text" placeholder="Name" required />
+        </div>
+        <div class="select-wrapper">
+
+          <select id="gender" name="gender" class="select" required />
+            <option value="" disabled selected>Gender</option>
+            <option class="Black" value="men">Man</option>
+            <option class="Black" value="women">Woman</option>
+            <option class="Black" value="koekkoek">In de war</option>
+          </select>>
+        </div>
+        <div class="input">
+          <input type="number" min="120" max="251" placeholder="Height" required />
+        </div>
+        <div class="input">
+          <input type="number" min="30" max="595" placeholder="Weight" required />
+        </div>
+        
+
+        <button type="submit" class="buttonCreate">Create</button>
+
+      </form>
+    </div>
+  </body>
+</html
