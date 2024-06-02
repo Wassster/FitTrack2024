@@ -9,27 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="login geprobeerd werkend te maken veder met debuggen van waarom de server niet opstart">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/MyServletContextListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/BackgroundFitTrack.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/FitTrackLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/achter.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/registrer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/eslint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/javas/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/nog.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/vite.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/vite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/web/createProfile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/web/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/web/registeren.html" afterDir="false" />
+    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="login debuggen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/LoginResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/registrer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/registrer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/javas/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/createProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/createProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/registeren.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/registeren.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,9 +84,9 @@
       <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\web" />
       <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\css" />
       <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\javas" />
-      <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\web" />
       <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp" />
     </key>
   </component>
@@ -214,7 +201,7 @@
       <workItem from="1717240336760" duration="10023000" />
       <workItem from="1717278722560" duration="4609000" />
       <workItem from="1717326773959" duration="1062000" />
-      <workItem from="1717336073415" duration="5848000" />
+      <workItem from="1717336073415" duration="7271000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />
@@ -256,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717283741495</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="login debuggen">
+      <option name="closed" value="true" />
+      <created>1717342340321</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717342340321</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +262,7 @@
     <MESSAGE value="domeinlaag gemaakt" />
     <MESSAGE value="maven aangepast" />
     <MESSAGE value="login geprobeerd werkend te maken veder met debuggen van waarom de server niet opstart" />
-    <option name="LAST_COMMIT_MESSAGE" value="login geprobeerd werkend te maken veder met debuggen van waarom de server niet opstart" />
+    <MESSAGE value="login debuggen" />
+    <option name="LAST_COMMIT_MESSAGE" value="login debuggen" />
   </component>
 </project>
