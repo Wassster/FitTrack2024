@@ -12,6 +12,7 @@ public class User implements Serializable {
     private ArrayList<Workouts> workouts = new ArrayList<Workouts>();
     private Profile profile;
     private CalendarPf calendar;
+    private String role = "gebruiker";
 
     public User(String username,String password, String emailAdres){
         this.username = username;
@@ -19,6 +20,7 @@ public class User implements Serializable {
         this. emailAdres = emailAdres;
         this.calendar = new CalendarPf();
     }
+
 
     public String getUsername() {
         return username;
@@ -51,5 +53,10 @@ public class User implements Serializable {
     public void addWorkouts(Workouts workout) {
         this.workouts.add(workout);
     }
-     //TODO maak een equals voor users
+
+    public String getRole() {
+        return role;
+    }
+
+    //TODO maak een equals voor users
 }

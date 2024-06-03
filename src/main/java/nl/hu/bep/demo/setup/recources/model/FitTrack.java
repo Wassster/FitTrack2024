@@ -17,6 +17,15 @@ public class FitTrack {
 
     }
 
+    public static User getUserByName(String user) {
+        for(User user1 : getDeFittrack().users){
+            if(user.equals(user1.getUsername())){
+                return user1;
+            }
+        }
+        return null;
+    }
+
     public ArrayList<User> getUsers() {
         return users;
     }
@@ -26,7 +35,7 @@ public class FitTrack {
         return exercises;
     }
 
-    public void addUser(User user){
+    public void addUser(User user) {
         this.users.add(user);
     }
     public void addExercises(Exercise exercise){

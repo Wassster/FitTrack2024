@@ -2,15 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../FitTrackLogo.png" />
+    <link rel="icon" type="image/svg+xml" href="FitTrackLogo.png" />
     <link rel="stylesheet" href="registrer.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FitTrack</title>
-    <script type="module" src="/web/main.js"></script>
   </head>
   <body>
     <header>
-      <img src="../FitTrackLogo.png" alt="FitTracklogo" class="oep" />
+      <img src="FitTrackLogo.png" alt="FitTracklogo" class="oep" />
       <nav class="nav">
         <a href="#">Contact</a>
       </nav>
@@ -19,11 +18,11 @@
       <form class="form" action="">
         <h1 class="kleur">Create profile</h1>
         <div class="input">
-          <input type="text" placeholder="Name" required />
+          <input type="text" placeholder="Name" id="name" required />
         </div>
         <div class="select-wrapper">
 
-          <select id="gender" name="gender" class="select" required />
+          <select id="gender" name="gender" class="select" id="gender" required />
             <option value="" disabled selected>Gender</option>
             <option class="Black" value="men">Man</option>
             <option class="Black" value="women">Woman</option>
@@ -31,10 +30,10 @@
           </select>>
         </div>
         <div class="input">
-          <input type="number" min="120" max="251" placeholder="Height" required />
+          <input type="number" min="120" max="251" placeholder="Height" id="height" required />
         </div>
         <div class="input">
-          <input type="number" min="30" max="595" placeholder="Weight" required />
+          <input type="number" min="30" max="595" placeholder="Weight" id="weight" required />
         </div>
         
 
@@ -42,5 +41,6 @@
 
       </form>
     </div>
+    <script src="profile.js"></script>
   </body>
-</html
+</html>

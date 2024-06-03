@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../FitTrackLogo.png" />
+    <link rel="icon" type="image/svg+xml" href="FitTrackLogo.png" />
     <link rel="stylesheet" href="registrer.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FitTrack</title>
-    <script type="module" src="/web/main.js"></script>
+    <script src="registrer.js"></script>
   </head>
   <body>
     <header>
-      <img src="../FitTrackLogo.png" alt="FitTracklogo" class="oep" />
+      <img src="FitTrackLogo.png" alt="FitTracklogo" class="oep" />
       <nav class="nav">
         <a href="#">Contact</a>
       </nav>
@@ -19,13 +19,13 @@
       <form class="form" action="">
         <h1 class="kleur">Register</h1>
         <div class="input">
-          <input type="email" placeholder="Email" required />
+          <input type="email" placeholder="Email" id="mail" required />
         </div>
         <div class="input">
-          <input type="text" placeholder="Username" required />
+          <input type="text" placeholder="Username" id="username" required />
         </div>
         <div class="input">
-          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Password" id="password" required />
         </div>
         <div class="remember">
           <label class="kleur"><input type="checkbox" /> Remember me</label>
@@ -40,5 +40,6 @@
         </div>
       </form>
     </div>
+  <script src="registrer.js"></script>
   </body>
 </html>

@@ -10,13 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="login debuggen">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/RegisterResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/MySecurityContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/registrer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/FitTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/FitTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/LoginResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/ProfilesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/ProfilesResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/recources.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/registeren.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/registeren.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/RegisterResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/RegisterResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/createProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/createProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/registeren.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registeren.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/registrer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registrer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +37,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Class" />
       </list>
@@ -84,6 +96,7 @@
       <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\web" />
       <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\css" />
       <recent name="C:\Users\wzena\OneDrive\Bureaublad\FitTrack2024\src\main\webapp\javas" />
@@ -91,7 +104,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.89" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.89" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.88" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.88" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="FitTrack2024:war exploded">
@@ -182,7 +195,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
       </set>
     </attachedChunks>
   </component>
@@ -203,6 +216,7 @@
       <workItem from="1717326773959" duration="1062000" />
       <workItem from="1717336073415" duration="7361000" />
       <workItem from="1717357412216" duration="5333000" />
+      <workItem from="1717405884019" duration="12357000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />
