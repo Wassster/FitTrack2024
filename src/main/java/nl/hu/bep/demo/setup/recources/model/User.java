@@ -14,6 +14,10 @@ public class User implements Serializable {
     private CalendarPf calendar;
     private String role = "gebruiker";
 
+
+    public User(){
+
+    }
     public User(String username,String password, String emailAdres){
         this.username = username;
         this.password = password;

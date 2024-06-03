@@ -1,29 +1,45 @@
-document.querySelector('.form').addEventListener('submit',function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
 
-    var email = document.getElementById("mail").value;
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var data = { email: email, password: password,username:username };
-    fetch('http://localhost:8080/registeren.html', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-        .then(response => {
-            if (response.ok) {
-                window.location.href = 'createProfile.html';
-            } else {
-                alert('Register failed. Please try again.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred while register.');
+    function register(event) {
+        event.preventDefault();
+
+        let formData = new FormData(document.querySelector("#regisForm"));
+        let jsonRequestBody = {};
+        formData.forEach((value, key) => {
+            jsonRequestBody[key] = value;
         });
 
-} )
+        console.log("JSON Request Body:", jsonRequestBody);
 
+        fetch("api/Register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(jsonRequestBody)
+        })
+            .then(response => {
+                console.log("Response status:", response.status);
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    return response.text().then(text => {
+                        console.log("Response text on error:", text);
+                        throw new Error(text);
+                    });
+                }
+            })
+            .then(myJson => {
+                console.log("Response JSON:", myJson);
+                // JWT-token opslaan in sessionStorage
+                window.sessionStorage.setItem("myJWT", myJson.Jwt);
+                // Doorsturen naar de profielpagina
+                window.location.href = './createProfile.html';
+            })
+            .catch(error => {
+                console.log("Error:", error.message);
+            });
+    }
 
+    document.querySelector("#regisForm").addEventListener("submit",register );
+});

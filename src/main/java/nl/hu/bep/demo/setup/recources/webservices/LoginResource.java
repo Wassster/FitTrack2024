@@ -1,11 +1,8 @@
 package nl.hu.bep.demo.setup.recources.webservices;
 
-
-import com.nimbusds.oauth2.sdk.TokenResponse;
 import io.jsonwebtoken.impl.crypto.MacProvider;
 import nl.hu.bep.demo.setup.recources.model.FitTrack;
 import nl.hu.bep.demo.setup.recources.model.User;
-
 
 import javax.crypto.SecretKey;
 import javax.ws.rs.Consumes;
@@ -20,7 +17,7 @@ import java.util.List;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-@Path("login")
+@Path("/login")
 public class LoginResource {
 
     public static final SecretKey KEY = MacProvider.generateKey();
@@ -35,21 +32,24 @@ public class LoginResource {
                     .setSubject(user.getUsername())
                     .setIssuedAt(new Date())
                     .setExpiration(new Date(System.currentTimeMillis() + 3600000))
-                    .claim("role","gebruiker")
+                    .claim("role", "gebruiker")
                     .signWith(SignatureAlgorithm.HS256, KEY)
                     .compact();
 
-            return Response.ok(new AbstractMap.SimpleEntry<>("JWT",token)).build();
+            return Response.ok(new AbstractMap.SimpleEntry<>("Jwt", token)).build();
         } else {
-            return Response.status(Response.Status.UNAUTHORIZED).entity("Invalid credentials").build();
+            return Response.status(Response.Status.UNAUTHORIZED)
+                    .entity(new AbstractMap.SimpleEntry<>("error", "Invalid credentials"))
+                    .type(MediaType.APPLICATION_JSON)
+                    .build();
         }
     }
 
-    private boolean isValidUser(User user){
+    private boolean isValidUser(User user) {
         FitTrack fitTrack = FitTrack.getDeFittrack();
-        List<User> users =fitTrack.getUsers();
-        for(User user1 : users){
-            if (user1.getUsername().equals(user.getUsername())&&user1.getPassword().equals(user.getPassword())){
+        List<User> users = fitTrack.getUsers();
+        for (User user1 : users) {
+            if (user1.getUsername().equals(user.getUsername()) && user1.getPassword().equals(user.getPassword())) {
                 return true;
             }
         }
