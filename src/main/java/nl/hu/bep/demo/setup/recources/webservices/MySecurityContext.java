@@ -15,6 +15,7 @@ public class MySecurityContext implements SecurityContext {
     }
 
     public Principal getUserPrincipal() {
+
         return (Principal) this.user;
     }
 
@@ -25,7 +26,7 @@ public class MySecurityContext implements SecurityContext {
             System.out.printf("%s equals %s", s, user.getRole());
             return s.equals(user.getRole());
         }
-        return false;
+        return true;
     }
 
     @Override

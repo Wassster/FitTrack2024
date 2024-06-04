@@ -9,21 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="login en registratie werken.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/DataUtils.java" afterDir="false" />
+    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="create profiel debuggen error 404 zonder reden">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/MyServletContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/MyServletContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/CalendarPf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/CalendarPf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/FitTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/FitTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/JerseyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/JerseyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Workouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Workouts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/MySecurityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/MySecurityContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/ProfilesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/ProfilesResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/RegisterResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/RegisterResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/createProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/createProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registrer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registrer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +208,8 @@
       <workItem from="1717336073415" duration="7361000" />
       <workItem from="1717357412216" duration="5333000" />
       <workItem from="1717405884019" duration="12357000" />
-      <workItem from="1717496433434" duration="9749000" />
+      <workItem from="1717496433434" duration="9861000" />
+      <workItem from="1717506729837" duration="7019000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />
@@ -279,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717455549448</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="create profiel debuggen error 404 zonder reden">
+      <option name="closed" value="true" />
+      <created>1717506292474</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717506292474</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +296,7 @@
     <MESSAGE value="login geprobeerd werkend te maken veder met debuggen van waarom de server niet opstart" />
     <MESSAGE value="login debuggen" />
     <MESSAGE value="login en registratie werken." />
-    <option name="LAST_COMMIT_MESSAGE" value="login en registratie werken." />
+    <MESSAGE value="create profiel debuggen error 404 zonder reden" />
+    <option name="LAST_COMMIT_MESSAGE" value="create profiel debuggen error 404 zonder reden" />
   </component>
 </project>

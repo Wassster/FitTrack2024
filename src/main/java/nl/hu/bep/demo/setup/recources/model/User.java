@@ -1,10 +1,11 @@
 package nl.hu.bep.demo.setup.recources.model;
 
 import java.io.Serializable;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class User implements  Serializable {
+public class User implements Principal,  Serializable {
 
     private String username;
     private String password;
@@ -12,7 +13,7 @@ public class User implements  Serializable {
     private ArrayList<Workouts> workouts = new ArrayList<Workouts>();
     private Profile profile;
     private CalendarPf calendar;
-    private String role = "gebruiker";
+    private String role ;
 
 
     public User(){
@@ -61,6 +62,12 @@ public class User implements  Serializable {
     public String getRole() {
         return role;
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
 
     //TODO maak een equals voor users
 }

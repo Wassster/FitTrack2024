@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // JWT-token opslaan in sessionStorage
                 window.sessionStorage.setItem("myJWT", myJson.Jwt);
                 // Doorsturen naar de profielpagina
+                console.log(myJson.Jwt)
                 window.location.href = './createProfile.html';
             })
             .catch(error => {
