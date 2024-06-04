@@ -1,12 +1,13 @@
 package nl.hu.bep.demo.setup.recources.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CalendarPf {
+public class CalendarPf implements Serializable {
         private Map<LocalDate, List<Workouts>> calendar;
 
         public CalendarPf() {

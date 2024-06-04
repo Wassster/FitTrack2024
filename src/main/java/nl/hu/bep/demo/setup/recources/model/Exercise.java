@@ -1,6 +1,8 @@
 package nl.hu.bep.demo.setup.recources.model;
 
-public class Exercise {
+import java.io.Serializable;
+
+public class Exercise implements Serializable {
 
     private String name;
     private String targetedMuscle;

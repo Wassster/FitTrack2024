@@ -1,15 +1,22 @@
 package nl.hu.bep.demo.setup.recources.model;
 
 
-public class Profile {
+import java.io.Serializable;
 
-    private int age;
+public class Profile implements Serializable {
+
+    private String gender;
     private float height;
     private float weight;
     private String name;
 
-    public Profile(int age, float weight, float height, String name){
-        this.age = age;
+
+    public Profile(){
+
+    }
+
+    public Profile(String gender, float weight, float height, String name){
+        this.gender = gender;
         this.weight = weight;
         this.height = height;
         this.name = name;
@@ -27,14 +34,6 @@ public class Profile {
         return weight;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -45,5 +44,13 @@ public class Profile {
 
     public void setWeight(float weight) {
         this.weight = weight;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getGender() {
+        return gender;
     }
 }

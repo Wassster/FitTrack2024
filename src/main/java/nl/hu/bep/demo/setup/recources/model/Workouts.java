@@ -2,11 +2,12 @@ package nl.hu.bep.demo.setup.recources.model;
 
 
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 
-public class Workouts {
+public class Workouts implements Serializable {
 
     private String name;
     private LocalDate date = LocalDate.now();

@@ -1,30 +1,39 @@
-document.querySelector('.form').addEventListener('submit',function (event) {
-    event.preventDefault();
+function profile(event) {
+    const token = window.sessionStorage.getItem("Jwt");
 
-    var name = document.getElementById("name").value;
-    var gender = document.getElementById("gender").value;
-    var height = document.getElementById("height").value;
-    var weight = document.getElementById("weight").value;
+    let formData = new FormData(document.querySelector("#profileForm"));
+    let jsonRequestBody = {};
+    formData.forEach((value, key) => {
+        jsonRequestBody[key] = value;
+    });
 
-    var data = { name:name, gender:gender,height:height,weight:weight};
+    console.log("JSON Request Body:", JSON.stringify(jsonRequestBody));
 
-    fetch('http://localhost:8080/createProfile', {
-        method: 'POST',
+    fetch("/api/Profile", {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(jsonRequestBody)
     })
         .then(response => {
+            console.log("hier")
             if (response.ok) {
-                window.location.href = 'dashboard.html';
+                return response.json();
             } else {
-                alert('creating profile failed. Please try again.');
+                return response.text().then(text => {
+                    console.log("Response text on error:", text);
+                    throw new Error(text);
+                });
             }
         })
+        .then(myJson => {
+            window.location.href = './dashboard.html';
+        })
         .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred while creating profile.');
+            console.log("Error:", error.message);
         });
+}
 
-} )
+document.querySelector("#profileForm").addEventListener("submit", profile);

@@ -1,9 +1,10 @@
 package nl.hu.bep.demo.setup.recources.model;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class FitTrack {
+public class FitTrack implements Serializable {
 
     private static FitTrack deFittrack = new FitTrack();
     private ArrayList<User> users = new ArrayList<User>();
@@ -24,6 +25,10 @@ public class FitTrack {
             }
         }
         return null;
+    }
+
+    public static void setDeFittrack(FitTrack fitTrack) {
+        deFittrack = fitTrack;
     }
 
     public ArrayList<User> getUsers() {

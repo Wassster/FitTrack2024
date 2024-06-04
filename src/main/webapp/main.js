@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .then(myJson => {
                 console.log("Response JSON:", myJson);
-                // JWT-token opslaan in sessionStorage
+
                 window.sessionStorage.setItem("myJWT", myJson.Jwt);
-                // Doorsturen naar de profielpagina
+
                 window.location.href = './dashboard.html';
             })
             .catch(error => {
