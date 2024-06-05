@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 30px rgba(255, 254, 254, 0.5);
+    z-index: 1;
 }
 
 body {
