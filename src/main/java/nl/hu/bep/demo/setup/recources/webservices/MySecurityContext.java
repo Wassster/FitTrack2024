@@ -22,7 +22,7 @@ public class MySecurityContext implements SecurityContext {
     @Override
     public boolean isUserInRole(String s) {
         if (user.getRole() != null) {
-            // Controleer of de gebruikersrol overeenkomt met de opgegeven rol
+
             System.out.printf("%s equals %s", s, user.getRole());
             return s.equals(user.getRole());
         }
@@ -31,13 +31,13 @@ public class MySecurityContext implements SecurityContext {
 
     @Override
     public boolean isSecure() {
-        // Controleer of de verbinding beveiligd is
+
         return "https".equals(this.scheme);
     }
 
     @Override
     public String getAuthenticationScheme() {
-        // Geef het beveiligingsschema terug
+
         return SecurityContext.BASIC_AUTH;
     }
 }

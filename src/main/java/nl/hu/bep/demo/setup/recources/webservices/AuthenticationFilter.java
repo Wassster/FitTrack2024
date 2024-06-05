@@ -23,23 +23,23 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
         boolean isSecure = requestCtx.getSecurityContext().isSecure();
         String scheme = requestCtx.getUriInfo().getRequestUri().getScheme();
-        // Users are treated as guests, unless a valid JWT is provided
-        MySecurityContext msc = null; // Initialize with null
+
+        MySecurityContext msc = null;
 
         String authHeader = requestCtx.getHeaderString(HttpHeaders.AUTHORIZATION);
         if (authHeader != null && authHeader.startsWith("Bearer")) {
             System.out.println("hier");
             String token = authHeader.substring("Bearer".length()).trim();
             try {
-                // Validate the token
+
                 JwtParser parser = Jwts.parser().setSigningKey(RegisterResource.KEY);
                 Claims claims = parser.parseClaimsJws(token).getBody();
                 System.out.println(claims);
 
                 String username = claims.getSubject();
-                User user = FitTrack.getUserByName(username); // Retrieve user from FitTrack
+                User user = FitTrack.getUserByName(username);
                 if (user != null) {
-                    msc = new MySecurityContext(user, scheme); // Initialize MySecurityContext with authenticated user
+                    msc = new MySecurityContext(user, scheme);
                 }
             } catch (JwtException | IllegalArgumentException e) {
                 System.out.println("Invalid JWT, processing as guest!");
@@ -49,7 +49,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
         }
 
         if (msc == null) {
-            // If no authenticated user, initialize MySecurityContext with null
+
             msc = new MySecurityContext(null, scheme);
         }
 
