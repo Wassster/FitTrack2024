@@ -9,17 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="dashboard af en bezig met menu">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Routine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/AddWorkoutResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/workout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/workouts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/workouts.js" afterDir="false" />
+    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="begonnen aan workouts toevoegen en routines maken">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/MyServletContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/MyServletContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Workouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Workouts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +216,7 @@
       <workItem from="1719148506955" duration="1211000" />
       <workItem from="1719174903807" duration="2687000" />
       <workItem from="1719243296999" duration="1882000" />
-      <workItem from="1719320451710" duration="7380000" />
+      <workItem from="1719320451710" duration="8830000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />
@@ -323,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717622643579</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="begonnen aan workouts toevoegen en routines maken">
+      <option name="closed" value="true" />
+      <created>1719352036736</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719352036736</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +339,7 @@
     <MESSAGE value="werkend login registratie en profiel aanmaken" />
     <MESSAGE value="dashboard gemaakt" />
     <MESSAGE value="dashboard af en bezig met menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="dashboard af en bezig met menu" />
+    <MESSAGE value="begonnen aan workouts toevoegen en routines maken" />
+    <option name="LAST_COMMIT_MESSAGE" value="begonnen aan workouts toevoegen en routines maken" />
   </component>
 </project>
