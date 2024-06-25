@@ -10,8 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="dashboard af en bezig met menu">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Routine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/AddWorkoutResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/workout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/workouts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/workouts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/MyServletContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/MyServletContextListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Workouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/Workouts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -208,6 +216,16 @@
       <workItem from="1717524857382" duration="1902000" />
       <workItem from="1717608191807" duration="11412000" />
       <workItem from="1717624484025" duration="22000" />
+      <workItem from="1718107305663" duration="828000" />
+      <workItem from="1718712968695" duration="84000" />
+      <workItem from="1718713064365" duration="277000" />
+      <workItem from="1718715710958" duration="3087000" />
+      <workItem from="1718971476054" duration="125000" />
+      <workItem from="1718972450310" duration="2842000" />
+      <workItem from="1719148506955" duration="1211000" />
+      <workItem from="1719174903807" duration="2687000" />
+      <workItem from="1719243296999" duration="1882000" />
+      <workItem from="1719320451710" duration="7380000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />

@@ -9,23 +9,24 @@ import java.util.ArrayList;
 
 public class Workouts implements Serializable {
 
-    private String name;
     private LocalDate date = LocalDate.now();
-    private ArrayList<Exercise> exercises = new ArrayList<Exercise>();
+    private Routine routine;
 
-    public Workouts(String name){
-        this.name = name;
+    public Workouts(){
+
     }
 
-    public String getName() {
-        return name;
+    public Routine getRoutine() {
+        return routine;
+    }
+
+    public void setRoutine(Routine routine) {
+        this.routine = routine;
     }
 
     public LocalDate getDate() {
         return date;
     }
 
-    public void addExercise(Exercise exercise){
-        this.exercises.add(exercise);
-    }
+
 }
