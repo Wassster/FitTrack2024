@@ -37,6 +37,7 @@ body {
 .nav {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .nav a {
@@ -76,3 +77,50 @@ body {
     margin-top: 20px;
     color: white;
 }
+
+.menu-wrapper {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 320px;
+    overflow: hidden;
+    z-index: 10;
+    max-height: 0px;
+    transition: max-height 0.5s;
+}
+
+.menu {
+    background: #4D4D4D;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-wrapper.open{
+    max-height: 300px;
+
+}
+.menuLink{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin:12px 0 ;
+}
+
+.menuLink p {
+    width: 100%;
+}
+.menuLink span{
+    font-size: 18px;
+    transition: transform 0.5s;
+}
+
+.menuLink:hover span{
+    transform: translateX(5px);
+
+}
+.menuLink:hover p{
+    font-weight: 550;
+}
+

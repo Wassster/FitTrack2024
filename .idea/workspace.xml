@@ -11,6 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="begonnen aan workouts toevoegen en routines maken">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +218,8 @@
       <workItem from="1719148506955" duration="1211000" />
       <workItem from="1719174903807" duration="2687000" />
       <workItem from="1719243296999" duration="1882000" />
-      <workItem from="1719320451710" duration="8830000" />
+      <workItem from="1719320451710" duration="8849000" />
+      <workItem from="1719399342113" duration="4446000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />
@@ -322,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719352036736</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="begonnen aan workouts toevoegen en routines maken">
+      <option name="closed" value="true" />
+      <created>1719354943173</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719354943173</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
