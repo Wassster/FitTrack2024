@@ -28,6 +28,7 @@ body {
     background: url("BackgroundFitTrack.jpeg") no-repeat;
     background-size: cover;
 }
+
 .oep {
     height: 110px;
     width: auto;
@@ -54,7 +55,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-.wrapper-2{
+
+.wrapper-2 {
     position: absolute;
     left: 500px;
     height: 900px;
@@ -66,4 +68,69 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
+
+.form {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 90%;
+}
+.input-group input{
+    width: 90%;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #e4ecf2;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: #fff;
+
+}
+
+.input {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.input input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #e4ecf2;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.input-group h1 {
+    flex: 0;
+    margin-left: 10px;
+}
+
+.input-group input[type="text"] {
+    width: calc(100% - 80px);
+    margin-left: 10px;
+}
+
+.buttonAdd, .buttonCreate {
+    background-color: #4D4D4D;
+    border: 2px solid rgb(255, 255, 255, 0.5);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px 0 10px;
+    cursor: pointer;
+}
+
+

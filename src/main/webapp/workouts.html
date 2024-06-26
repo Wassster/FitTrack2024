@@ -10,18 +10,44 @@
 </head>
 <body>
 <header>
-    <img src="FitTrackLogo.png" alt="FitTracklogo" class="oep" />
+    <a href="dashboard.html">
+        <img src="FitTrackLogo.png" alt="FitTracklogo" class="oep" />
+    </a>
     <nav class="nav">
         <a href="#">Contact</a>
     </nav>
 </header>
 
 <div class="wrapper">
-    <ul id="routineList"></ul>
+    <ul id="routineList">
+
+    </ul>
 </div>
 
 <div class="wrapper-2">
-    <div id="routineDetails"></div>
+    <form class="form" id="workoutForm" action="">
+        <div class="input-group">
+            <input type="text" placeholder="Workout Name" name="workoutName" id="pe">
+        </div>
+        <div id="exerciseContainer">
+            <div class="input-group">
+                <div class="input">
+                    <input type="text" placeholder="Name" name="name" required />
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Weight" name="weight">
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Reps" name="reps">
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Sets" name="sets">
+                </div>
+            </div>
+        </div>
+        <button type="button" class="buttonAdd" id="addExercise">Add Exercise</button>
+        <button type="submit" class="buttonCreate">Create</button>
+    </form>
 </div>
 
 </body>

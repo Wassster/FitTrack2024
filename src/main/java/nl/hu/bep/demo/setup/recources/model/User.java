@@ -14,8 +14,6 @@ public class User implements Principal,  Serializable {
     private Profile profile;
     private CalendarPf calendar;
     private String role ;
-    private ArrayList<Routine> routines= new ArrayList<Routine>();
-
 
     public User(){
 
@@ -51,15 +49,6 @@ public class User implements Principal,  Serializable {
     public Profile getProfile() {
         return profile;
     }
-
-    public ArrayList<Routine> getRoutines() {
-        return routines;
-    }
-
-    public void addRoutines(Routine routine) {
-        this.routines.add(routine);
-    }
-
     public void setProfile(Profile profile) {
         this.profile = profile;
     }
