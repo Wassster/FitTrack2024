@@ -20,7 +20,7 @@ public class AddWorkoutResource {
         User user = (User) context.getUserPrincipal();
 
         if (workout == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("Workout cannot be null").build();
+            return Response.status(Response.Status.UNAUTHORIZED).entity("Workout cannot be null").build();
         }
 
         user.addWorkouts(workout);

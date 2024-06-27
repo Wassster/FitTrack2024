@@ -48,6 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         let formData = new FormData(document.querySelector("#workoutForm"));
+        let jsonRequestBody2 = {
+            name: "henk",
+            leeftijd = "a"
+        };
+
         let jsonRequestBody = {};
         formData.forEach((value, key) => {
             jsonRequestBody[key] = value;
