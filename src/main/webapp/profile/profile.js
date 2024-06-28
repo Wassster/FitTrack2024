@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             })
             .then(myJson => {
-                window.location.href = './dashboard.html';
+                window.location.href = '../dashboard/dashboard.html';
             })
             .catch(error => {
                 console.log("Error:", error.message);

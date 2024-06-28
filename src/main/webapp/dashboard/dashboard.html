@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="FitTrackLogo.png" />
+    <link rel="icon" type="image/svg+xml" href="../FitTrackLogo.png" />
     <link rel="stylesheet" href="dashboard.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FitTrack</title>
 </head>
 <body>
 <header>
-    <img src="FitTrackLogo.png" alt="FitTracklogo" class="oep" />
+    <img src="../FitTrackLogo.png" alt="FitTracklogo" class="oep" />
     <nav class="nav">
-        <img id="profile" src="profileLogo.png" alt="profile" onclick="toggleMenu()">
+        <img id="profile" src="../profileLogo.png" alt="profile" onclick="toggleMenu()">
     </nav>
 
 </header>
 
 <div class="wrapper">
     <h1 class="text" >Add workout</h1>
-    <a href="workouts.html" >
-        <img class="picture" src="plus%20(1).png">
+    <a href="../workout/workouts.html" >
+        <img class="picture" src="../plus%20(1).png">
     </a>
 
 
 </div>
 <div class="wrapper">
     <h1 class="text" >Calendar</h1>
-    <a href="#">
-        <img class="picture" src="calendar.png">
+    <a href="../calendar/calendar.html">
+        <img class="picture" src="../calendar.png">
     </a>
 
 
@@ -35,14 +35,14 @@
 <div class="wrapper">
     <h1 class="text" >Progress</h1>
     <a href="#">
-        <img class="picture" src="progress.png">
+        <img class="picture" src="../progress.png">
     </a>
 
 </div>
 
 <div class="menu-wrapper" id="menu">
     <div class="menu">
-        <a href="#" class="menuLink">
+        <a href="../profile/editProfile.html" class="menuLink">
             <p>Edit Profile</p>
             <span>></span>
         </a>
@@ -50,7 +50,7 @@
             <p>Contact</p>
             <span>></span>
         </a>
-        <a href="#" class="menuLink">
+        <a href="http://localhost:8080" class="menuLink" onclick="logout()">
             <p>Log out</p>
             <span>></span>
         </a>
@@ -65,6 +65,13 @@
     function toggleMenu(){
         menu.classList.toggle("open")
     }
+
+    function logout(){
+        window.sessionStorage.removeItem("myJWT")
+        console.log("uitgelogd",window.sessionStorage.getItem("myJWT"))
+    }
+
+
 </script>
 
 

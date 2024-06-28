@@ -42,6 +42,10 @@ public class User implements Principal,  Serializable {
         return calendar;
     }
 
+    public void setCalendar(CalendarPf calendar) {
+        this.calendar = calendar;
+    }
+
     public ArrayList<Workouts> getWorkouts() {
         return workouts;
     }

@@ -32,7 +32,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
             String token = authHeader.substring("Bearer".length()).trim();
             try {
 
-                JwtParser parser = Jwts.parser().setSigningKey(RegisterResource.KEY);
+                JwtParser parser = Jwts.parser().setSigningKey(LoginResource.KEY );
                 Claims claims = parser.parseClaimsJws(token).getBody();
                 System.out.println(claims);
 
@@ -40,6 +40,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
                 User user = FitTrack.getUserByName(username);
                 if (user != null) {
                     msc = new MySecurityContext(user, scheme);
+                    System.out.println("ook goed");
                 }
             } catch (JwtException | IllegalArgumentException e) {
                 System.out.println("Invalid JWT, processing as guest!");

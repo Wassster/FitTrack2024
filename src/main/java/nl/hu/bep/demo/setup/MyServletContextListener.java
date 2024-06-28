@@ -14,8 +14,6 @@ public class MyServletContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         System.out.println("Initializing application");
 
-
-
         FitTrack fitTrack = DataUtils.getFittrackData();
         if (fitTrack != null) {
             FitTrack.setDeFittrack(fitTrack);

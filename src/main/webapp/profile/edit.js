@@ -1,27 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
 
-    function Reg(event) {
+document.addEventListener("DOMContentLoaded", function () {
+    function profileedit(event) {
         event.preventDefault();
 
-        let formData = new FormData(document.querySelector("#loginForm"));
+
+        let formData = new FormData(document.querySelector("#profileeditForm"));
         let jsonRequestBody = {};
         formData.forEach((value, key) => {
             jsonRequestBody[key] = value;
         });
 
-        console.log("JSON Request Body:", jsonRequestBody);
+        console.log("JSON Request Body:", JSON.stringify(jsonRequestBody));
 
-        fetch("api/login", {
-            method: "POST",
+        fetch("/api/Profile/edit", {
+            method: "PUT",
             headers: {
+                "AUTHORIZATION": `Bearer`+ window.sessionStorage.getItem("myJWT"),
                 "Content-Type": "application/json"
+
             },
             body: JSON.stringify(jsonRequestBody)
         })
             .then(response => {
-                console.log("Response status:", response.status);
                 if (response.ok) {
-                    return response.json();
+                    console.log("has been updated")
+                    return response;
                 } else {
                     return response.text().then(text => {
                         console.log("Response text on error:", text);
@@ -29,18 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
             })
-            .then(myJson => {
-                console.log("Response JSON:", myJson);
-
-                window.sessionStorage.setItem("myJWT", myJson.Jwt);
-
-                window.location.href = 'dashboard/dashboard.html';
-            })
             .catch(error => {
                 console.log("Error:", error.message);
             });
     }
 
-    document.querySelector("#loginForm").addEventListener("submit", Reg);
+    const profileForm = document.querySelector("#profileeditForm");
+    if (profileForm) {
+        profileForm.addEventListener("submit", profileedit);
+    } else {
+        console.error("profileForm element not found!");
+    }
 });
 

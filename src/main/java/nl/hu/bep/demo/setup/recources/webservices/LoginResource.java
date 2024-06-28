@@ -25,34 +25,49 @@ public class LoginResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(User user){
-
-        if (isValidUser(user)) {
-            String token = Jwts.builder()
-                    .setSubject(user.getUsername())
-                    .setIssuedAt(new Date())
-                    .setExpiration(new Date(System.currentTimeMillis() + 3600000))
-                    .claim("role", "gebruiker")
-                    .signWith(SignatureAlgorithm.HS256, KEY)
-                    .compact();
-
-            return Response.ok(new AbstractMap.SimpleEntry<>("Jwt", token)).build();
-        } else {
-            return Response.status(Response.Status.UNAUTHORIZED)
-                    .entity(new AbstractMap.SimpleEntry<>("error", "Invalid credentials"))
-                    .type(MediaType.APPLICATION_JSON)
-                    .build();
-        }
-    }
-
-    private boolean isValidUser(User user) {
+    public Response login(User user) {
         FitTrack fitTrack = FitTrack.getDeFittrack();
         List<User> users = fitTrack.getUsers();
         for (User user1 : users) {
             if (user1.getUsername().equals(user.getUsername()) && user1.getPassword().equals(user.getPassword())) {
-                return true;
+                String token = Jwts.builder()
+                        .setSubject(user1.getUsername())
+                        .setIssuedAt(new Date())
+                        .setExpiration(new Date(System.currentTimeMillis() + 3600000))
+                        .claim("role", "gebruiker")
+                        .signWith(SignatureAlgorithm.HS256, KEY)
+                        .compact();
+
+                return Response.ok(new AbstractMap.SimpleEntry<>("Jwt", token)).build();
             }
+
         }
-        return false;
+        return Response.status(Response.Status.UNAUTHORIZED)
+                .entity(new AbstractMap.SimpleEntry<>("error", "Invalid credentials"))
+                .type(MediaType.APPLICATION_JSON)
+                .build();
+    }
+
+    @POST
+    @Path("Register")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response register(User user) {
+        FitTrack fitTrack = FitTrack.getDeFittrack();
+        fitTrack.addUser(user);
+        String token = Jwts.builder()
+                .setSubject(user.getUsername())
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + 3600000))
+                .claim("role", "gebruiker")
+                .signWith(SignatureAlgorithm.HS256, KEY)
+                .compact();
+        return Response.ok(new AbstractMap.SimpleEntry<>("Jwt", token)).build();
+
+
     }
 }
+
+
+
+

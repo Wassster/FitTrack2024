@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log("JSON Request Body:", jsonRequestBody);
 
-        fetch("api/Register", {
+        fetch("http://localhost:8080/api/login/Register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 console.log(myJson.Jwt)
 
-                window.location.href = './createProfile.html';
+                window.location.href = 'profile/createProfile.html';
             })
             .catch(error => {
                 console.log("Error:", error.message);
