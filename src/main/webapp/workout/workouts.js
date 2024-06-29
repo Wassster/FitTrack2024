@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => {
                 if (response.ok) {
                     console.log("Response status:", response.status);
+                    document.querySelector("#workoutForm").reset();
+                    document.querySelector("#exerciseContainer").innerHTML = "";
                     return response.json;
                 } else {
                     return response.text().then(text => {

@@ -10,9 +10,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 100px;
+    padding: 10px 5%;
     background: url(../nog.jpeg) no-repeat;
-    background-size: 100%;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,6 +27,7 @@ body {
     min-height: 100vh;
     background: url("../BackgroundFitTrack.jpeg") no-repeat;
     background-size: cover;
+    padding-top: 100px;
 }
 
 .oep {
@@ -56,8 +57,9 @@ body {
 
 .wrapper {
     position: relative;
-    height: 300px;
-    width: 300px;
+    bottom: 380px;
+    width: 80%;
+    max-width: 300px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -66,26 +68,30 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    bottom: 250px;
+    padding-bottom: 20px;
 }
 
 .picture {
-    height: 210px;
+    width: 100%;
+    height: auto;
+    max-height: 210px;
 }
 
 .text {
     margin-top: 20px;
     color: white;
+    text-align: center;
 }
 
 .menu-wrapper {
     position: absolute;
     right: 0;
     top: 100px;
-    width: 320px;
+    width: 80%;
+    max-width: 320px;
     overflow: hidden;
     z-index: 10;
-    max-height: 0px;
+    max-height: 0;
     transition: max-height 0.5s;
 }
 
@@ -96,31 +102,58 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.menu-wrapper.open{
+.menu-wrapper.open {
     max-height: 300px;
-
 }
-.menuLink{
+
+.menuLink {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: white;
-    margin:12px 0 ;
+    margin: 12px 0;
 }
 
 .menuLink p {
     width: 100%;
 }
-.menuLink span{
+
+.menuLink span {
     font-size: 18px;
     transition: transform 0.5s;
 }
 
-.menuLink:hover span{
+.menuLink:hover span {
     transform: translateX(5px);
-
 }
-.menuLink:hover p{
+
+.menuLink:hover p {
     font-weight: 550;
 }
 
+@media (max-width: 100px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .nav a {
+        font-size: 1em;
+        margin-left: 10px;
+    }
+
+    .nav #profile {
+        height: 60px;
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .wrapper {
+        width: 90%;
+        bottom: 380px;
+    }
+
+    .menu-wrapper {
+        width: 90%;
+        max-width: 100%;
+    }
+}

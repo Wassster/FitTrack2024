@@ -1,5 +1,6 @@
 package nl.hu.bep.demo.setup.recources.webservices;
 
+
 import nl.hu.bep.demo.setup.recources.model.CalendarPf;
 import nl.hu.bep.demo.setup.recources.model.User;
 import nl.hu.bep.demo.setup.recources.model.Workouts;
@@ -23,11 +24,18 @@ public class CalendarResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPastWorkouts(@Context SecurityContext context) {
+
         User user = (User) context.getUserPrincipal();
 
-        CalendarPf calendar = user.getCalendar();
-        Map<LocalDate, List<Workouts>> groupedWorkouts = calendar.getCalendar();
+        ArrayList<Workouts> workouts = user.getWorkouts();
+        CalendarPf calendarPf = new CalendarPf();
 
-        return Response.ok(groupedWorkouts).build();
+        for (Workouts workout : workouts) {
+            calendarPf.addWorkout(workout);
+        }
+
+        return Response.ok(calendarPf.getCalendar()).build();
     }
 }
+
+

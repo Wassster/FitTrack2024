@@ -49,5 +49,20 @@ public class ProfilesResource {
         return Response.ok("Profiel has been updated").build();
     }
 
+    @GET
+    @Path("edit")
+    @RolesAllowed("gebruiker")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response profile(@Context SecurityContext context){
+        User user = (User) context.getUserPrincipal();
+
+        if(user == null){
+            return Response.status(Response.Status.UNAUTHORIZED).entity("No user logged in").build();
+        }
+
+        Profile profile = user.getProfile();
+        return Response.ok(profile).build();
+    }
+
 
 }
