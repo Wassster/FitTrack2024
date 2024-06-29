@@ -1,129 +1,97 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const calendar = document.getElementById('calendar');
-    const monthDisplay = document.getElementById('monthDisplay');
-    const backButton = document.getElementById('backButton');
-    const nextButton = document.getElementById('nextButton');
+    const monthDisplay = document.getElementById("monthDisplay");
+    const calendar = document.getElementById("calendar");
+    const backButton = document.getElementById("backButton");
+    const nextButton = document.getElementById("nextButton");
+    const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-    let nav = 0;
-    let clicked = null;
-    const events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
+    let currentMonth = new Date().getMonth();
+    let currentYear = new Date().getFullYear();
 
-    const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    function loadWorkouts() {
+        fetch("/api/calendar", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${window.sessionStorage.getItem("myJWT")}`
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                renderCalendar(data);
+            })
+            .catch(error => {
+                console.error("Error fetching workouts:", error);
+            });
+    }
 
-    function load() {
-        const dt = new Date();
+    function renderCalendar(workouts) {
+        calendar.innerHTML = "";
 
-        if (nav !== 0) {
-            dt.setMonth(new Date().getMonth() + nav);
+        const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
+        const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
+        const firstDayOfWeek = (firstDayOfMonth.getDay() + 6) % 7;
+        const daysInMonth = lastDayOfMonth.getDate();
+
+        for (let i = 0; i < firstDayOfWeek; i++) {
+            const daySquare = document.createElement("div");
+            daySquare.classList.add("padding");
+            calendar.appendChild(daySquare);
         }
 
-        const day = dt.getDate();
-        const month = dt.getMonth();
-        const year = dt.getFullYear();
+        for (let i = 1; i <= daysInMonth; i++) {
+            const daySquare = document.createElement("div");
+            daySquare.classList.add("day");
+            daySquare.textContent = i;
 
-        const firstDayOfMonth = new Date(year, month, 1);
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const dayString = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${i.toString().padStart(2, '0')}`;
 
-        const dateString = firstDayOfMonth.toLocaleDateString('en-us', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'numeric',
-            day: 'numeric',
-        });
-
-        const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
-
-        monthDisplay.innerText = `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
-
-        calendar.innerHTML = '';
-
-        for(let i = 1; i <= paddingDays + daysInMonth; i++) {
-            const daySquare = document.createElement('div');
-            daySquare.classList.add('day');
-
-            const dayString = `${month + 1}/${i - paddingDays}/${year}`;
-
-            if (i > paddingDays) {
-                daySquare.innerText = i - paddingDays;
-                const eventForDay = events.find(e => e.date === dayString);
-
-                if (eventForDay) {
-                    const eventDiv = document.createElement('div');
-                    eventDiv.classList.add('event');
-                    eventDiv.innerText = eventForDay.title;
-                    daySquare.appendChild(eventDiv);
-                }
-
-                daySquare.addEventListener('click', () => openModal(dayString));
-            } else {
-                daySquare.classList.add('padding');
+            if (workouts[dayString]) {
+                workouts[dayString].forEach(workout => {
+                    const workoutDiv = document.createElement("div");
+                    workoutDiv.classList.add("event");
+                    workoutDiv.textContent = workout.workoutName;
+                    daySquare.appendChild(workoutDiv);
+                });
             }
+
+            daySquare.addEventListener("click", () => {
+                openModal(dayString, workouts[dayString] || []);
+            });
 
             calendar.appendChild(daySquare);
         }
     }
 
-    function openModal(date) {
-        clicked = date;
+    function updateMonthDisplay() {
+        const options = { month: "long", year: "numeric" };
+        const date = new Date(currentYear, currentMonth);
+        monthDisplay.textContent = date.toLocaleDateString("en-US", options);
+    }
 
-        const eventForDay = events.find(e => e.date === clicked);
-
-        if (eventForDay) {
-            document.getElementById('eventText').innerText = eventForDay.title;
-            document.getElementById('deleteEventModal').style.display = 'block';
-        } else {
-            document.getElementById('newEventModal').style.display = 'block';
+    backButton.addEventListener("click", () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
         }
-
-        document.getElementById('modalBackDrop').style.display = 'block';
-    }
-
-    function closeModal() {
-        document.getElementById('eventTitleInput').classList.remove('error');
-        document.getElementById('newEventModal').style.display = 'none';
-        document.getElementById('deleteEventModal').style.display = 'none';
-        document.getElementById('modalBackDrop').style.display = 'none';
-        document.getElementById('eventTitleInput').value = '';
-        clicked = null;
-        load();
-    }
-
-    function saveEvent() {
-        if (document.getElementById('eventTitleInput').value) {
-            document.getElementById('eventTitleInput').classList.remove('error');
-
-            events.push({
-                date: clicked,
-                title: document.getElementById('eventTitleInput').value,
-            });
-
-            localStorage.setItem('events', JSON.stringify(events));
-            closeModal();
-        } else {
-            document.getElementById('eventTitleInput').classList.add('error');
-        }
-    }
-
-    function deleteEvent() {
-        events.splice(events.findIndex(e => e.date === clicked), 1);
-        localStorage.setItem('events', JSON.stringify(events));
-        closeModal();
-    }
-
-    backButton.addEventListener('click', () => {
-        nav--;
-        load();
+        updateMonthDisplay();
+        loadWorkouts();
     });
 
-    nextButton.addEventListener('click', () => {
-        nav++;
-        load();
+    nextButton.addEventListener("click", () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        updateMonthDisplay();
+        loadWorkouts();
     });
 
-    document.getElementById('saveButton').addEventListener('click', saveEvent);
-    document.getElementById('cancelButton').addEventListener('click', closeModal);
-    document.getElementById('deleteButton').addEventListener('click', deleteEvent);
-    document.getElementById('closeButton').addEventListener('click', closeModal);
+    function openModal(date, workouts) {
+        alert(`Workouts on ${date}: ${workouts.map(w => w.workoutName).join(", ")}`);
+    }
 
-    load();
+    updateMonthDisplay();
+    loadWorkouts();
 });
