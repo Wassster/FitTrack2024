@@ -9,22 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="testen">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/CalendarResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/CalendarResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/ProfilesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/webservices/ProfilesResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile/edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/workout/workout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workout/workout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/workout/workouts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workout/workouts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/workout/workouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workout/workouts.js" afterDir="false" />
+    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="calendar zo goed als af">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/progress/progress.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +21,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -235,7 +222,7 @@
       <workItem from="1719488189422" duration="5441000" />
       <workItem from="1719576889780" duration="15538000" />
       <workItem from="1719659005652" duration="4260000" />
-      <workItem from="1719665569464" duration="17341000" />
+      <workItem from="1719665569464" duration="18279000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />
@@ -381,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719665431490</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="calendar zo goed als af">
+      <option name="closed" value="true" />
+      <created>1719700919375</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719700919375</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,6 +398,7 @@
     <MESSAGE value="1" />
     <MESSAGE value="edit profile toegevoegd uitloggen calendar gemaakt maar nog niet werkend" />
     <MESSAGE value="testen" />
-    <option name="LAST_COMMIT_MESSAGE" value="testen" />
+    <MESSAGE value="calendar zo goed als af" />
+    <option name="LAST_COMMIT_MESSAGE" value="calendar zo goed als af" />
   </component>
 </project>
