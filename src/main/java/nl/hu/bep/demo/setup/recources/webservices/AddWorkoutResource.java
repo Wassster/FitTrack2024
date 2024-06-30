@@ -10,6 +10,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -42,5 +43,29 @@ public class AddWorkoutResource {
         System.out.println(workout);
         return Response.ok("Workout has been added").build();
     }
+
+    @GET
+    @RolesAllowed("gebruiker")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getLastWorkout(@Context SecurityContext context) {
+        User user = (User) context.getUserPrincipal();
+
+        if (user == null) {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        }
+        ArrayList<Workouts> workouts = new ArrayList<Workouts>();
+
+        int count = 0;
+
+        for (Workouts workout : user.getWorkouts()) {
+            if (count <= 5) {
+                workouts.add(workout);
+            }
+        }
+
+        return Response.ok(workouts).build();
+
+    }
+
 
 }

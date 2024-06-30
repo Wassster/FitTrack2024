@@ -42,6 +42,20 @@ body {
     margin-left: 1200px;
 }
 
+.wrapper {
+    position: absolute;
+    left: 5px;
+    height: 900px;
+    width: 400px;
+    border: 2px solid rgb(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 .wrapper-2 {
     position: absolute;
     left: 500px;
@@ -118,5 +132,19 @@ body {
     margin: 10px 2px 0 10px;
     cursor: pointer;
 }
+#routineList li {
+    color: white;
+    font-size: larger;
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+#routineList li:hover {
+    font-weight: 600;
+}
+
+
 
 
