@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log("JSON Request Body:", jsonRequestBody);
 
-        fetch("http://localhost:8080/api/login/Register", {
+        fetch("api/login/Register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

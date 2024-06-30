@@ -1,51 +1,136 @@
-const ctx = document.getElementById('myChart');
+document.addEventListener("DOMContentLoaded", function () {
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const ctx1 = document.getElementById('myChart1').getContext('2d');
+    const ctx2 = document.getElementById('myChart2').getContext('2d');
 
-
-fetch("/api/workout", {
-    method: "GET",
-    headers: {
-        "Authorization": `Bearer ${window.sessionStorage.getItem("myJWT")}`
-    }
-})
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            return response.text().then(text => {
-                throw new Error(text);
-            });
+    fetch("/api/workout", {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${window.sessionStorage.getItem("myJWT")}`
         }
     })
-    .then(data => {
-        console.log(data)
-        newChart(data,)
-    })
-    .catch(error => {
-        console.error("Error fetching profile:", error);
-    });
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                return response.text().then(text => {
+                    throw new Error(text);
+                });
+            }
+        })
+        .then(data => {
+            console.log(data);
+            newChart(data);
+            newChart1(data);
+            newChart2(data);
+        })
+        .catch(error => {
+            console.error("Error fetching profile:", error);
+        });
 
+    function newChart(data) {
+        const exerciseMap = new Map();
 
-function newChart(data){
-    data.forEach(workout => {
-        const exerciseNames = workout.exercises.map(exercise => exercise.name);
-        const exerciseWeight = workout.exercises.map(exercise => exercise.weight);
+        data.forEach(workout => {
+            workout.exercises.forEach(exercise => {
+                const exerciseName = exercise.name;
+                const exerciseReps = parseInt(exercise.reps, 10); // Parse reps as a number
 
-    new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: exerciseNames,
-            datasets: [{
-                label: 'weight',
-                data: exerciseWeight,
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+                if (!exerciseMap.has(exerciseName)) {
+                    exerciseMap.set(exerciseName, 0);
+                }
+                exerciseMap.set(exerciseName, exerciseMap.get(exerciseName) + exerciseReps);
+            });
+        });
+
+        const exerciseNames = Array.from(exerciseMap.keys());
+        const totalReps = Array.from(exerciseMap.values());
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: exerciseNames,
+                datasets: [{
+                    label: 'Total Reps',
+                    data: totalReps,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: 'white'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: 'white'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white'
+                        }
+                    }
                 }
             }
-        }
-    });})}
+        });
+    }
 
+
+    function newChart1(data) {
+        const workoutNames = data.map(workout => workout.workoutName);
+        const exerciseCounts = data.map(workout => workout.exercises.length);
+
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: workoutNames,
+                datasets: [{
+                    label: 'Number of Exercises',
+                    data: exerciseCounts,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function newChart2(data) {
+        const exerciseNames = data.flatMap(workout => workout.exercises.map(exercise => exercise.name));
+        const exerciseWeights = data.flatMap(workout => workout.exercises.map(exercise => exercise.weight));
+
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: exerciseNames,
+                datasets: [{
+                    label: 'Weight',
+                    data: exerciseWeights,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white'
+                        }
+                    }
+                }
+            }
+        });
+    }
+});

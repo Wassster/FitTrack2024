@@ -42,11 +42,9 @@ body {
     margin-left: 1200px;
 }
 
-.wrapper-2 {
-    position: absolute;
-    left: 500px;
-    height: 900px;
-    width: 1700px;
+.chart{
+    height: 500px;
+    width: 500px;
     border: 2px solid rgb(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -57,17 +55,10 @@ body {
     flex-direction: column;
 }
 
-.chart{
-    max-width: 980px;
-    height: 450px;
-    padding: 50px;
-    margin: 0 auto;
-    background: white;
-}
-
 .chart .chart_types{
     text-align: center;
     margin-bottom: 30px;
+
 }
 
 .chart .chart_types button{
