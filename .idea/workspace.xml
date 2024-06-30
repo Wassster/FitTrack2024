@@ -9,14 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="progress grafiek gemaakt even kijken hoe ik dit zou moeten implementeren en style goed maken">
+    <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="alles af nog hier en daar dingen mooi maken">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/progress/progress.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/progress/progress.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/progress/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registrer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registrer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/CalendarPf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/CalendarPf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/FitTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/FitTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/workout/workouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workout/workouts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +235,7 @@
       <workItem from="1719659005652" duration="4260000" />
       <workItem from="1719665569464" duration="18593000" />
       <workItem from="1719746884785" duration="10878000" />
-      <workItem from="1719765597051" duration="10054000" />
+      <workItem from="1719765597051" duration="13849000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />
@@ -415,7 +413,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719760422012</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="alles af nog hier en daar dingen mooi maken">
+      <option name="closed" value="true" />
+      <created>1719777753075</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719777753075</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,6 +447,7 @@
     <MESSAGE value="begonnen aan progress" />
     <MESSAGE value="vorige workouts tonen plus automatische invul wanneer er op geklikt wordt" />
     <MESSAGE value="progress grafiek gemaakt even kijken hoe ik dit zou moeten implementeren en style goed maken" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress grafiek gemaakt even kijken hoe ik dit zou moeten implementeren en style goed maken" />
+    <MESSAGE value="alles af nog hier en daar dingen mooi maken" />
+    <option name="LAST_COMMIT_MESSAGE" value="alles af nog hier en daar dingen mooi maken" />
   </component>
 </project>

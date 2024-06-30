@@ -71,5 +71,5 @@ public class User implements Principal,  Serializable {
     }
 
 
-    //TODO maak een equals voor users
+
 }

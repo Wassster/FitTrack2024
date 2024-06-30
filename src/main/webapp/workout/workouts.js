@@ -52,6 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function addExerciseFields(name = '', weight = '', reps = '', sets = '') {
+        if (name instanceof PointerEvent) {
+            name = '';
+            weight = '';
+            reps = '';
+            sets = '';
+        }
+
         let exerciseContainer = document.querySelector("#exerciseContainer");
         let newExerciseGroup = document.createElement("div");
         newExerciseGroup.className = "input-group";
@@ -135,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let count = 0;
     const addExerciseButton = document.querySelector("#addExercise");
     if (addExerciseButton) {
-        addExerciseButton.addEventListener("click", addExerciseFields);
+        addExerciseButton.addEventListener("click", () => addExerciseFields());
     } else {
         console.error("addExerciseButton element not found!");
     }
