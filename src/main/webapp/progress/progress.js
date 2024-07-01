@@ -97,6 +97,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 }]
             },
             options: {
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: 'white'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: 'white'
+                        }
+                    }
+                },
                 plugins: {
                     legend: {
                         labels: {

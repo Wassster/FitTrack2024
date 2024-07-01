@@ -64,3 +64,11 @@ body {
 .chart .chart_types button{
     padding: 10px 25px;
 }
+
+
+@media (max-width: 1500px) {
+    .nav a {
+        font-size: 1em;
+        margin-left: 10px;
+    }
+}

@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         exerciseContainer.appendChild(newExerciseGroup);
 
         count++;
-        if (count >= 11) {
+        if (count >= 7) {
             addExerciseButton.disabled = true;
         }
     }
