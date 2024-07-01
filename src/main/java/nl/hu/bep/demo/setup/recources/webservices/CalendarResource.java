@@ -5,6 +5,7 @@ import nl.hu.bep.demo.setup.recources.model.CalendarPf;
 import nl.hu.bep.demo.setup.recources.model.User;
 import nl.hu.bep.demo.setup.recources.model.Workouts;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -22,6 +23,7 @@ import java.util.Map;
 public class CalendarResource {
 
     @GET
+    @RolesAllowed("gebruiker")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPastWorkouts(@Context SecurityContext context) {
 
