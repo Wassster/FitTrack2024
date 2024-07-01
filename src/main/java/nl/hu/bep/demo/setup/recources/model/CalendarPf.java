@@ -40,7 +40,7 @@ public class CalendarPf implements Serializable {
         return calendar;
     }
 
-    public static class LocalDateKeySerializer extends StdSerializer<LocalDate> { //https://stackoverflow.com/questions/28802544/java-8-localdate-jackson-format
+    public static class LocalDateKeySerializer extends StdSerializer<LocalDate> {   //https://stackoverflow.com/questions/28802544/java-8-localdate-jackson-format
 
         public LocalDateKeySerializer() {
             super(LocalDate.class);

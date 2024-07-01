@@ -34,10 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.log("Response status:", response.status);
                     document.querySelector("#workoutForm").reset();
                     document.querySelector("#exerciseContainer").innerHTML = "";
+                    alert("Workout added")
                     return response.json();
                 } else {
                     return response.text().then(text => {
-                        console.log("Response text on error:", text);
+                        console.log("error:", text);
                         throw new Error(text);
                     });
                 }
@@ -112,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             })
             .catch(error => {
-                console.error("Error fetching profile:", error);
+                console.error("Error:", error);
             });
     }
 
@@ -125,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         count = workout.exercises.length;
-        if (count >= 11) {
+        if (count >= 7) {
             addExerciseButton.disabled = true;
         } else {
             addExerciseButton.disabled = false;
@@ -136,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (workoutForm) {
         workoutForm.addEventListener("submit", addWorkout);
     } else {
-        console.error("workoutForm element not found!");
+        console.error("workoutForm not found!");
     }
 
     let count = 0;
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (addExerciseButton) {
         addExerciseButton.addEventListener("click", () => addExerciseFields());
     } else {
-        console.error("addExerciseButton element not found!");
+        console.error("addExerciseButtonnot found!");
     }
 
     loadworkout();

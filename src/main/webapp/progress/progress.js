@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {                   //https://www.youtube.com/watch?v=XPOSEf40SkQ
     const ctx = document.getElementById('myChart').getContext('2d');
     const ctx1 = document.getElementById('myChart1').getContext('2d');
     const ctx2 = document.getElementById('myChart2').getContext('2d');
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             newChart2(data);
         })
         .catch(error => {
-            console.error("Error fetching profile:", error);
+            console.error("error :", error);
         });
 
     function newChart(data) {

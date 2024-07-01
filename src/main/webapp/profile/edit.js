@@ -20,11 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
         })
             .then(response => {
                 if (response.ok) {
-                    console.log("Profile has been updated");
+                    alert("Profile has been updated");
                     return response;
                 } else {
                     return response.text().then(text => {
-                        console.log("Response text on error:", text);
                         throw new Error(text);
                     });
                 }
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('weight').value = data.weight;
             })
             .catch(error => {
-                console.error("Error fetching profile:", error);
+                console.error("Error", error);
             });
     }
 

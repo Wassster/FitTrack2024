@@ -19,12 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify(jsonRequestBody)
         })
             .then(response => {
-                console.log("Response status:", response.status);
                 if (response.ok) {
                     return response.json();
                 } else {
                     return response.text().then(text => {
-                        console.log("Response text on error:", text);
+                        alert("Login Failed")
                         throw new Error(text);
                     });
                 }

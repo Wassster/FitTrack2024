@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 renderCalendar(data);
             })
             .catch(error => {
-                console.error("Error fetching workouts:", error);
+                console.error("Error", error);
             });
     }
 
-    function renderCalendar(workouts) {
+    function renderCalendar(workouts) {  //https://www.youtube.com/watch?v=m9OSBJaQTlM&t=1378s
         const dt = new Date();
 
         if (nav !== 0) {
@@ -46,14 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
             day: 'numeric',
         });
 
-        console.log('First Day of Month:', firstDayOfMonth);
-        console.log('Date String:', dateString);
+        console.log( firstDayOfMonth);
+        console.log( dateString);
 
         const weekdayName = dateString.split(' ')[0];
         const paddingDays = weekdays.indexOf(weekdayName);
 
-        console.log('Weekday Name:', weekdayName);
-        console.log('Padding Days:', paddingDays);
+        console.log( weekdayName);
+        console.log(paddingDays);
 
         document.getElementById('monthDisplay').innerText =
             `${dt.toLocaleDateString('nl-NL', { month: 'long' })} ${year}`;

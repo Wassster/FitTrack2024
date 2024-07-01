@@ -11,11 +11,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f8cc4161-5222-4a44-8242-df06d9014f94" name="Changes" comment="onnodige dingen weggehaald">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/CalendarPf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hu/bep/demo/setup/recources/model/CalendarPf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile/editProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/progress/progress.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/calendar/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/progress/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/progress/progress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/workout/workout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workout/workout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registrer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registrer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registrer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registrer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/workout/workouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/workout/workouts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +107,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.88" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.88" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="21" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.89" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.89" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="21" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="FitTrack2024:war exploded">
@@ -194,7 +198,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -241,6 +245,7 @@
       <workItem from="1719788435895" duration="30000" />
       <workItem from="1719833735683" duration="11271000" />
       <workItem from="1719845240830" duration="2000000" />
+      <workItem from="1719847621881" duration="3139000" />
     </task>
     <task id="LOCAL-00001" summary="eerste commit">
       <option name="closed" value="true" />

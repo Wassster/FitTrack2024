@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     return response;
                 } else {
                     return response.text().then(text => {
-                        console.log("Response text on error:", text);
                         throw new Error(text);
                     });
                 }
@@ -42,6 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (profileForm) {
         profileForm.addEventListener("submit", profile);
     } else {
-        console.error("profileForm element not found!");
+        console.error("profileForm not found");
     }
 });
