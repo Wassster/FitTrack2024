@@ -5,7 +5,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,6 +27,7 @@ body {
     min-height: 100vh;
     background: url("../BackgroundFitTrack.jpeg") no-repeat;
     background-size: cover;
+    padding-top: 100px;
 }
 
 .oep {
@@ -35,45 +36,48 @@ body {
 }
 
 .nav a {
-    position: relative;
     font-size: 1.1em;
     color: white;
     font-weight: 500;
-    margin-left: 1200px;
+    margin-left: 20px;
 }
 
 .wrapper {
-    position: absolute;
-    left: 5px;
-    height: 900px;
-    width: 400px;
-    border: 2px solid rgb(255, 255, 255, 0.5);
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
     justify-content: flex-start;
+    margin-right: 20px;
+    padding: 20px;
+
+}
+
+#Name{
+    color: white;
+    margin-left: 50px;
+    margin-top: 20px;;
 }
 
 .wrapper-2 {
-    position: absolute;
-    left: 500px;
-    height: 900px;
-    width: 1700px;
-    border: 2px solid rgb(255, 255, 255, 0.5);
+    width: 100%;
+    max-width: 1700px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .form {
-    position: absolute;
-    top: 40px;
     width: 100%;
 }
 
@@ -81,33 +85,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
-    width: 90%;
-}
-.input-group input{
-    width: 90%;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #e4ecf2;
-    border-radius: 5px;
-    padding: 0 10px;
-    color: #fff;
-
+    margin: 20px 20px;
 }
 
-.input {
+.input-group input {
     flex: 1;
-    margin: 0 10px;
-}
-
-.input input {
-    width: 100%;
     height: 40px;
     background: transparent;
     border: 2px solid #e4ecf2;
     border-radius: 5px;
     padding: 0 10px;
     color: #fff;
+}
+.input-group input::placeholder{
+    color: lightgray;
 }
 
 .input-group h1 {
@@ -116,13 +107,13 @@ body {
 }
 
 .input-group input[type="text"] {
-    width: calc(100% - 80px);
+    width: calc(100% - 50px);
     margin-left: 10px;
 }
 
 .buttonAdd, .buttonCreate {
     background-color: #4D4D4D;
-    border: 2px solid rgb(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -132,19 +123,54 @@ body {
     margin: 10px 2px 0 10px;
     cursor: pointer;
 }
+
+.buttonAdd:hover, .buttonCreate:hover {
+    background-color: #333333;
+    border-color: white;
+    color: #e0e0e0;
+}
+
 #routineList li {
     color: white;
     font-size: larger;
     margin-left: 50px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #routineList li:hover {
     font-weight: 600;
 }
 
+@media (max-width: 1439px) {
+    .nav a {
+        font-size: 1em;
+        margin-left: 10px;
+    }
 
+    .wrapper {
+        height: 600px;
+        width: 200px;
+    }
 
+    .wrapper-2 {
+        height: 600px;
+        width: 1100px;
+    }
 
+    #routineList li {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        width: 400px;
+        height: 900px;
+    }
+
+    .wrapper-2 {
+        width: 1700px;
+        height: 900px;
+    }
+}

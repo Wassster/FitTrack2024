@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data.forEach(workout => {
             workout.exercises.forEach(exercise => {
                 const exerciseName = exercise.name;
-                const exerciseReps = parseInt(exercise.reps, 10); // Parse reps as a number
+                const exerciseReps = parseInt(exercise.reps, 10);
 
                 if (!exerciseMap.has(exerciseName)) {
                     exerciseMap.set(exerciseName, 0);

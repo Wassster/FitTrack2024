@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const calendar = document.getElementById("calendar");
     const backButton = document.getElementById("backButton");
     const nextButton = document.getElementById("nextButton");
-    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const weekdays = ['maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag','zondag'];
 
     let currentMonth = new Date().getMonth();
     let currentYear = new Date().getFullYear();
@@ -16,9 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Authorization": `Bearer ${window.sessionStorage.getItem("myJWT")}`
             }
         })
-            .then(response => {
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
                 renderCalendar(data);
             })
@@ -28,9 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderCalendar(workouts) {
-        calendar.innerHTML = '';
-
         const dt = new Date();
+
         if (nav !== 0) {
             dt.setMonth(new Date().getMonth() + nav);
         }
@@ -40,40 +37,59 @@ document.addEventListener("DOMContentLoaded", function () {
         const year = dt.getFullYear();
 
         const firstDayOfMonth = new Date(year, month, 1);
-        const lastDayOfMonth = new Date(year, month + 1, 0);
-        const daysInMonth = lastDayOfMonth.getDate();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-        const firstDayOfWeek = firstDayOfMonth.getDay();
+        const dateString = firstDayOfMonth.toLocaleDateString('nl-NL', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+        });
 
-        document.getElementById('monthDisplay').innerText = `${dt.toLocaleDateString('nl-NL', { month: 'long' })} ${year}`;
+        console.log('First Day of Month:', firstDayOfMonth);
+        console.log('Date String:', dateString);
 
-        for (let i = 0; i < firstDayOfWeek; i++) {
-            const daySquare = document.createElement('div');
-            daySquare.classList.add('padding');
-            calendar.appendChild(daySquare);
-        }
+        const weekdayName = dateString.split(' ')[0];
+        const paddingDays = weekdays.indexOf(weekdayName);
 
-        for (let i = 1; i <= daysInMonth; i++) {
+        console.log('Weekday Name:', weekdayName);
+        console.log('Padding Days:', paddingDays);
+
+        document.getElementById('monthDisplay').innerText =
+            `${dt.toLocaleDateString('nl-NL', { month: 'long' })} ${year}`;
+
+        calendar.innerHTML = '';
+
+        for (let i = 1; i <= paddingDays + daysInMonth; i++) {
             const daySquare = document.createElement('div');
             daySquare.classList.add('day');
-            daySquare.textContent = i;
 
-            const dayString = `${year}-${(month + 1).toString().padStart(2, '0')}-${i.toString().padStart(2, '0')}`;
+            const dayNum = i - paddingDays;
+            const dayString = `${year}-${String(month + 1).padStart(2, '0')}-${String(dayNum).padStart(2, '0')}`;
 
-            const eventForDay = workouts[dayString];
+            if (i > paddingDays) {
+                daySquare.innerText = dayNum;
 
-            if (eventForDay) {
-                eventForDay.forEach(workout => {
-                    const workoutDiv = document.createElement('div');
-                    workoutDiv.classList.add('event');
-                    workoutDiv.textContent = workout.workoutName;
-                    daySquare.appendChild(workoutDiv);
+                if (dayNum === day && nav === 0) {
+                    daySquare.id = 'currentDay';
+                }
+
+                const eventForDay = workouts[dayString];
+                console.log(dayString, eventForDay);
+
+                if (eventForDay) {
+                    eventForDay.forEach(workout => {
+                        const workoutDiv = document.createElement('div');
+                        workoutDiv.classList.add('event');
+                        workoutDiv.textContent = workout.workoutName;
+                        daySquare.appendChild(workoutDiv);
+                    });
+                }
+
+                daySquare.addEventListener('click', () => {
+                    openModal(dayString, eventForDay || []);
                 });
             }
-
-            daySquare.addEventListener('click', () => {
-                openModal(dayString, eventForDay || []);
-            });
 
             calendar.appendChild(daySquare);
         }
@@ -124,12 +140,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         modal.style.display = 'block';
+        document.getElementById('modalBackDrop').style.display = 'block';
     }
+
     document.getElementById('closeModal').addEventListener('click', () => {
         document.getElementById('workoutModal').style.display = 'none';
         document.getElementById('modalBackDrop').style.display = 'none';
     });
 
     updateMonthDisplay();
-    loadWorkouts();})
+    loadWorkouts();
+});
 
